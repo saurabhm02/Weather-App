@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Nunito:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Poppins&family=Roboto&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
+
+*, *::before
+, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    position: relative;
+    background-color:#fff ;
+}
+
+/* ---- Container ---- */
+.container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    color: var(--PRIMARY-TEXT-COLOR);
+    margin: 0 auto;
+}
+.weather-rep{
+    min-width: 350px;
+    flex: 1;
+    height: 1000px;
+    padding: 30px 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: var(--PRIMARY-TEXT-COLOR);
+}
+.location {
+    white-space: wrap;
+}
+
+.location > h2{
+    font-size: 30px;
+}
+.location > h3 {
+    font-size: 20px;
+}
+
+.location > h3 > i {
+    font-size: 18px;
+    padding-right: 10px;
+}
