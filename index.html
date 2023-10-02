@@ -6,6 +6,7 @@
     <title>Weather App | Saurabh</title>
     <link rel="icon" type="image/x-icon" href="./assets/favicon.png">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8e3c188234.js" crossorigin="anonymous"></script>
 
 </head>
 <body>
@@ -31,11 +32,254 @@
                 </div>
             </nav>
 
+            <div class="curr-status">
+                <div class="weather weather-1">
+                    <div class="weather-heading">
+                        <div class="weather-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+
+                        <div class="weather-desc">
+                            <h3>Weather</h3>
+                            <h4>Tell me the Weather Status?..</h4>
+                        </div>
+                    </div>
+
+                    <div class="weather-temp">
+                        <div class="temperature">
+                            <div class="temp">
+                                <h2 id="temp">20</h2>
+                                <img src="./assets/clear.png" alt="" class="weatherDesc-img">
+                            </div>
+                            <p class="desc">Cloudy</p>
+                        </div>
+
+                        <div class="weather-details">
+                            <div class="box">
+                                <p>Pressure</p>
+                                <h3 id="pressure">500mb</h3>
+                            </div>
+                            <div class="box">
+                                <p>Visibility</p>
+                                <h3 id="visibility">3.2 Km</h3>
+                            </div>
+                            <div class="box">
+                                <p>Humidity</p>
+                                <h3 id="humidity">70%</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- sunRise & sunSet Box -->
+                    <div class="weather weather-2">
+                        <div class="more-details">
+                            <div class="more-detail-box">
+                                <p>Sunrise & sunset</p>
+                                <div class="sunrise-sunset">
+                                    <div class="sunrise">
+                                        <span>🌄</span>
+                                        <div class="sunrise-status">
+                                            <p>Sunrise</p>
+                                            <h3 id="sunrise-time">6:20 AM</h3>
+                                        </div>
+                                    </div>
+
+                                    <div class="sunset">
+                                        <span>🌇</span>
+                                        <div class="sunset-status">
+                                            <p>Sunset</p>
+                                            <h3 id="sunset-time">5:54 PM</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- uvi-index Box -->
+
+                            <div class="more-detail-box uvi-rays-area">
+                                <img src="./assets/clear.png" alt="">
+                                <div class="uvi-mesurment">
+                                    <div class="uvi-rays-status">
+                                        <div id="uvi-rays">
+                                            15 UVI
+                                        </div>
+                                        
+                                        <div id="uvi-lvl">
+                                            Moderate
+                                        </div>
+
+                                        <div class="uvi-lvl-desc">
+                                            <span class="uvi-lvl2">
+                                                Moderate</span> 
+                                                riske of from UV rays
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- 24-hrs Weather Updates -->
+                        <div class="hourly-weather">
+                            <div class="hourly-Temp-heading">
+                                <h2>How's the <br> temperature today at?..</h2>
+                            </div>
+
+                            <div class="temp-at">
+                                <div class="hourly-box">
+                                    <p class="hors">00:00 AM</p>
+                                    <img src="./assets/clear.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">01:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">02:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">03:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">04:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">05:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">06:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">07:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">08:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">09:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">10:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">11:00 AM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">12:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+                                
+                                <div class="hourly-box">
+                                    <p class="hors">01:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">02:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">03:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">04:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">05:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">06:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">07:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">08:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">09:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">10:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+
+                                <div class="hourly-box">
+                                    <p class="hors">11:00 PM</p>
+                                    <img src="./assets/clouds.png" alt="" class="hourly-img">
+                                    <p class="hourly-temp">20.7 °c</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
             
         </div>
     </div>
 
     <script src="script.js"></script>
-    <script src="https://kit.fontawesome.com/c1d09d0b88.js" crossorigin="anonymous"></script>
 </body>
 </html>
