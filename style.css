@@ -50,3 +50,37 @@ nav {
     font-size: 18px;
     padding-right: 10px;
 }
+
+/* search Area section css */
+
+.search-area{
+    position: relative;
+    padding-right: 300px;
+}
+
+.search-area > input{
+    width: 100%;
+    height: 45px;
+    background-color: #f4f4f4;
+    border: none;
+    outline: none;
+    color: #0a2348;
+    padding-left: 20px;
+    font-weight: 500;
+    font-size: 3rem;
+    border: 1.5px solid #e3e4e5b1;
+}
+
+::placeholder{
+    color: #0a2348;
+}
+.search-area > i {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    color: orange;
+    cursor: pointer;
+    font-size: 18px;
+    width: 50px;
+    text-align: center;
+}
