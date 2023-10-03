@@ -46,7 +46,7 @@ nav {
     font-size: 20px;
 }
 
-.location > h3 > i {
+.location > h3 > img {
     font-size: 18px;
     padding-right: 10px;
 }
@@ -74,7 +74,7 @@ nav {
 ::placeholder{
     color: #0a2348;
 }
-.search-area > i {
+.search-area > img{
     position: absolute;
     top: 12px;
     right: 0;
@@ -84,3 +84,234 @@ nav {
     width: 50px;
     text-align: center;
 }
+.hamburger{
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 46px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #0a2348;
+}
+
+.curr-status{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 0;
+}
+
+.weather{
+    min-width: 200px;
+    max-width: 650px;
+    min-height: 325px;
+    padding: 20px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    color: var(--PRIMARY-TEXT-COLOR);
+    box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
+        -2px -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Box-1 */
+
+.weather-1{
+    /* background: linear-gradient(to right bottom, #b7f1f3, #feddcd); */
+    background-image: linear-gradient(to right top, #80aced, #32c7f4, #23dddd, #7febb4, #d2f090);
+   
+}
+
+
+.weather-heading{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.weather-img{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    padding: 8px;
+}
+.weather-img > img{
+    position: absolute;
+    left: -7px;
+    top: -4px;
+}
+.weather-desc > h4{
+    font-size: 14px;
+    white-space: nowrap;
+    font-weight: 200;
+}
+.weather-temp{
+    margin-bottom: 10px;
+}
+.weather-temp  .temperature{
+    display: flex;
+    align-items: center;
+}
+.temperature h2{
+    font-size: 50px;
+}
+
+.temperature img{
+    width: 120px;
+    margin-left: 40px;
+}
+
+.temp{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.temp img {
+    width: 100px;
+    margin: -20px;
+}
+
+.weather-temp p{
+    margin-top: -25px;
+    white-space: wrap;
+    font-weight: 600;
+    width: 200px;
+    letter-spacing: 0.8px;
+}
+.weather-details .box{
+    width: 100px;
+    height: 80px;
+    border-radius: 20px;
+    margin-inline: 4px;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.box p{
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.box h3 {
+    font-size: 18px;
+}
+
+.weather-details div:first-child{
+    background-color: #0a2348;
+    color: #fff;
+}
+.weather-details div:nth-child(2){
+    background-color: #CCE16A;
+}
+
+.weather-details div:nth-child(3){
+    background-color: #fff;
+}
+
+
+/* 2- BOx */
+
+.weather-2 {
+    background: #FFD8E7;
+    background-image: url("./assets//city.jpg");
+}
+.more-detail-box {
+    width: 100%;
+    height: 110px;
+    background-color: #0a2348;
+    border-radius:20px;
+    margin-block: 20px;
+    color: #fff;
+    padding: 14px;
+    font-weight: 100;
+}
+
+.more-detail-box p{
+    font-size: 14px;
+}
+.sunrise-sunset{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sunrise, .sunset {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-block: 10px;
+    white-space: nowrap;
+    margin-right: -5px;
+}
+
+.sunrise span,
+.sunset span {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.sunrise-status p,
+.sunset-status p {
+    font-size: 15px;
+    margin: 2px;
+}
+
+/* box of UVI Rays Css Start */
+
+.uvi-rays-area {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.uvi-rays-area img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.uvi-mesurment .uvi-rays-status{
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+}
+
+.uvi-rays-status div:first-child{
+    font-size: 25px;
+}
+
+.uvi-rays-status #uvi-lvl {
+    background-color: #CCE16A;
+    color: #0a2348;
+    padding: 3px 8px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.uvi-lvl-desc {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+/* box of UVI Rays Css end */
