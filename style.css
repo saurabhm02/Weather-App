@@ -541,3 +541,185 @@ footer .copyright {
     letter-spacing: 0.5px;
 
 }
+
+
+
+/* FOr  RESPONSIVE CSS start */
+@media screen and (max-width: 1020px) {
+
+    .weather-rep {
+        height: 1320px;
+    }
+
+    .weather {
+        width: 100%;
+    }
+
+    .curr-status {
+        flex-direction: column;
+    }
+
+    .sunrise-sunset {
+        margin-inline: 20px;
+    }
+
+    .more-detail-box {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .slider {
+        height: 1320px;
+    }
+
+    .hourly-weather {
+        gap: 0;
+    }
+
+    .days-box {
+        height: 100px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .hamburger {
+        display: block;
+        z-index: 5;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .search-area {
+        margin-right: 60px;
+    }
+
+    .temperature img {
+        margin-left: 60px;
+    }
+
+    .temp img {
+        margin-left: -20px;
+    }
+
+    .slider {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        padding: 30px 40px;
+        display: none;
+        transition: 0.3s;
+    }
+
+    .slider.active {
+        display: block;
+    }
+
+    .more-detail-box {
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 570px) {
+
+    .weather-rep {
+        height: 1350px;
+    }
+
+    .sunrise-sunset {
+        margin-inline: 0;
+    }
+
+    .slider {
+        height: 1300px;
+    }
+
+    nav {
+        flex-direction: column-reverse;
+    }
+
+    .search-area {
+        width: 85%;
+        margin-top: 8px;
+    }
+
+    .location {
+        margin: 20px 10px 0;
+    }
+
+    .location h2 {
+        font-size: 25px;
+    }
+
+    .location h3 {
+        font-size: var(--SMALL-TEXT);
+    }
+
+    .hourly-Temp-heading h2 {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+
+    .hamburger {
+        right: 10px;
+        top: 46px;
+    }
+
+    .temperature img {
+        width: 80px;
+        margin-bottom: 18px;
+
+    }
+
+    .sunrise-sunset h3 {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .sunrise span,
+    .sunset span {
+        margin-right: 5px;
+        font-size: 20px;
+    }
+}
+
+
+/* scroll design start */
+html {
+    --scrollbarBG: #ffffff;
+    --thumbBG: #eaa12c;
+    scroll-behavior: smooth;
+  }
+  body::-webkit-scrollbar {
+    width: 10px;
+  }
+  body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+  }
+  body::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+    
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG);
+    border-radius: 10px;
+    border: 2px solid var(--scrollbarBG);
+  }
+  
+  /* scroll design end */
