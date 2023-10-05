@@ -35,6 +35,18 @@
                 </div>
             </div>
 
+            <div class="more-Dbox uvi-rays-area">
+                <img src="./assets/clear.png" width="50" alt="">
+                <div class="uvi-mesurement">
+                    <div class="uvi-rays-status">
+                        <div id="uvi-rays">20 UVI</div>
+                        <div class="uvi-level">Moderate</div>
+                    </div>
+                    <div class="uvi-level-desc">
+                        <span class="uvi-level2">Moderate</span> risk of from UV rays
+                    </div>
+                </div>
+            </div>
             <!-- 6 day Forecats sec -->
 
             <div class="weather-prediction">
@@ -107,7 +119,7 @@
 
                 <div class="days-box">
                     <div>
-                        <img class="days-icon" src="images/clouds.png" alt="">
+                        <img class="days-icon" src="./assets/clouds.png" alt="">
                         <div class="days">
                             <div class="prediction-day">Sunday 10</div>
                             <div class="prediction-desc">Cloudy</div>
@@ -161,42 +173,16 @@
                     </div>
 
                     <div class="weather-temp">
-                        <div class="temperature">
-                            <div class="temp">
-                                <h2 id="temp">1</h2>
-                                <img src="./assets/celsius.svg" alt="" >
+                            <div class="temperature">
+                                <div class="temp">
+                                    <h2 id="temp">1</h2>
+                                    <img src="./assets/celsius.svg" alt="" >
+                                </div>
+                                <img src="./assets/clear.png" alt="" id="weatherDesc-img">
                             </div>
-                            <img src="./assets/clear.png" alt="" id="weatherDesc-img">
-                        </div>
                             <p id="desc"></p>
-                    </div>
-                        <!-- <div class="more-dbox uvi-rays-area">
-                            <div class="uvi-mesurment">
-                                <div class="upper-details">
-                                    <img src="./assets/clear.png" alt="">
-                                    <div class="uvi-rays-status">
-                                    
-                                        <div id="uvi-rays">
-                                            15 UVI
-                                        </div>
-                                        <div id="uvi-lvl">
-                                            Moderate
-                                        </div>
-                                    </div>
-                                </div>
-                                
-                              
-                                <div class="uvi-level-desc">
-                                    <span class="uvi-level2">Moderate</span> risk of from UV rays
-                                </div>
-                                
-                            </div>
-                        </div>  -->
-                    <!-- </div>  -->
+                    </div>    
 
-                   
-
-                    
                     <div class="weather-details">
                         <div class="box">
                             <p>Pressure</p>
@@ -207,7 +193,7 @@
                             <h3 id="visibility"></h3>
                         </div>
                         <div class="box">
-                            <p>Humidity</p>
+                            <p class="hum">Humidity</p>
                             <h3 id="humidity"></h3>
                         </div>
                     </div>
@@ -241,24 +227,28 @@
                                 </div>
                             </div>
 
-                            <!-- uvi-index Box -->
+                           
+                          <!-- MoonRise & MoonSet box -->
+                            <div class="more-detail-box">
 
-                            <div class="more-detail-box uvi-rays-area">
-                                <img src="./assets/clear.png" alt="">
-                                <div class="uvi-mesurment">
-                                    <div class="uvi-rays-status">
-                                        <div id="uvi-rays">
-                                            15 UVI
-                                        </div>
-                                        
-                                        <div id="uvi-lvl">
-                                            Moderate
+                                <p>Moonrise & Moonset</p>
+
+                                <div class="sunrise-sunset">
+                                    <div class="sunrise">
+                                        <span><img src="./assets/earth.png" width="32" alt=""></span>
+                                        <div class="sunrise-status">
+                                            <p>Moonrise</p>
+                                            <h3 id="moonrise-time">6:20 AM</h3>
                                         </div>
                                     </div>
-                                    <div class="uvi-level-desc">
-                                        <span class="uvi-level2">Moderate</span> risk of from UV rays
+
+                                    <div class="sunset">
+                                        <span><img src="./assets/moonset.png" width="32" alt=""></span>
+                                        <div class="sunset-status">
+                                            <p>Moonset</p>
+                                            <h3 id="moonset-time">5:54 PM</h3>
+                                        </div>
                                     </div>
-                                    
                                 </div>
                             </div>
                         </div>
@@ -276,7 +266,7 @@
                         <div class="hourly-box">
                             <p class="hors">00:00 AM</p>
                             <img src="./assets/clear.png" height="64" width="64" alt="" class="hourly-img">
-                            <p class="hourly-temp">20.7 °c</p>
+                            <p class="hourly-temp"></p>
                         </div>
 
                         <div class="hourly-box">
