@@ -1,4 +1,5 @@
 const API_KEY = "2b894fd71873476c9ce210205230410";
+const API_KEY2 = "88019d70248bb4ce60a400e0cb528fee";
 
 const hamburger = document.querySelector(".hamburger");
 const slidebar = document.querySelector(".slidebar");
@@ -8,6 +9,7 @@ var city = document.getElementById("city");
 var state = document.getElementById("state");
 var country = document.getElementById("country");
 var searchCity = document.getElementById("search");
+var countryFlag = document.getElementById("countryIcon");
 
 var cityTemp = document.getElementById("temp");
 var weatherIcon = document.getElementById("weather-icon");
@@ -211,5 +213,20 @@ setInterval(() => {
 }, 1000);
 
 
+// For find Country Flag
 
+// async function fetchSearchWeatherInfo(){
+//   try{
+//       const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchCity}&appid=${API_KEY2}&units=metric`);
+//       const data = await response.json();
+//       renderWeatherInfo(data); 
+//   }
+//   catch(err){
+//       console.log(err);
+//   }
+// };
+
+// function renderWeatherInfo(weatherInfo){
+//   countryFlag.innerHTML = `<img src="https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png">`; 
+// };
 
