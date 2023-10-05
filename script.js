@@ -1,4 +1,4 @@
-const API_KEY = "2f4e76d80efc4d57975123033230310";
+const API_KEY = "2b894fd71873476c9ce210205230410";
 
 const hamburger = document.querySelector(".hamburger");
 const slidebar = document.querySelector(".slider");
@@ -20,6 +20,9 @@ var weatherHumidity = document.getElementById("humidity");
 
 var sunriseTime = document.getElementById("sunrise-time");
 var sunsetTime = document.getElementById("sunset-time");
+var moonRise  = document.getElementById("moonrise-time");
+var moonSet = document.getElementById("moonset-time");
+
 var uviRays = document.getElementById("uvi-rays");
 var uviConcernLevel = document.querySelector("#uvi-lvl");
 var uviConcernLevel2 = document.querySelector(".uvi-level2");
@@ -78,17 +81,14 @@ window.addEventListener("contextmenu", (e) => {
 
 var response;
 var data;
-
-
 async function fetchWeatherReport(searchCity){
     try{
-        response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${searchCity}&days=7&aqi=yes&alerts=no`);
+        response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=da2103b2c4ce4f95af051626232503&q=${searchCity}&days=7&aqi=yes&alerts=no`);
         data = await response.json();
         todaysWeatherReport(data);
         hoursWeatherReport(data);
-        forecastdayReport(data);
+        forecastdayReport();
         console.log(data);
-
     }
     catch(e){
         console.log(e);
@@ -115,6 +115,10 @@ function todaysWeatherReport(data){
 
     sunriseTime.innerHTML = data?.forecast?.forecastday[0]?.astro?.sunrise;
     sunsetTime.innerHTML = data?.forecast?.forecastday[0]?.astro?.sunset;
+    moonRise.innerHTML = data?.forecast?.forecastday[0]?.astro?.moonrise;
+    moonSet.innerHTML = data?.forecast?.forecastday[0]?.astro?.moonset;
+
+
     uviRays.innerHTML = data?.current?.uv + "UVI";
     aqi.innerHTML = Math.round(data?.current?.air_quality?.pm2_5);
 
@@ -147,46 +151,89 @@ function checkUviValue(level, color) {
     uviConcernLevel2.innerHTML = level;
 }
 
-function hoursWeatherReport(data){
+function hoursWeatherReport(data) {
     hoursTemp.forEach((t, i) => {
-        t.innerHTML = data?.forecast?.forecastday[0]?.hour[i]?.temp_c;
+      t.innerHTML = data.forecast.forecastday[0].hour[i].temp_c;
     });
-
+  
     hoursIcon.forEach((t, i) => {
-        t.src = data?.forecast?.forecastday[0]?.hour[i]?.condition?.icon;
+      t.src = data.forecast.forecastday[0].hour[i].condition.icon;
     });
-};
+ }
 
+// function hoursWeatherReport(data) {
+//     const hourlyData = data?.forecast?.forecastday[0]?.hour;
+//     if (hourlyData) {
+//         for (let i = 0; i < hourlyData.length; i++) {
+//             const hour = hourlyData[i];
+//             if (hour) {
+//                 hoursTemp[i].innerHTML = hour.temp_c;
+//                 hoursIcon[i].src = hour.condition?.icon;
+//             }
+//         }
+// }
 
-function forecastdayReport(data){
-    daysIcon.forEach((icon, i) => {
-        icon.src = data?.forecast?.forecastday[i]?.day?.condition?.icon;
+function forecastdayReport() {
+    daysIcon.forEach((icon, index) => {
+      icon.src = data.forecast.forecastday[index].day.condition.icon;
     });
-
-    daysTemp.forEach((temp, i) => {
-        temp.innerHTML = Math.round(data?.forecast?.forecastday[i]?.day?.maxtemp_c) +
+  
+    daysTemp.forEach((temp, index) => {
+      temp.innerHTML =
+        Math.round(data.forecast.forecastday[index].day.maxtemp_c) +
         "°c" +
         `<span> / </span>` +
-        Math.round(data?.forecast?.forecastday[i]?.day?.mintemp_c) +
+        Math.round(data.forecast.forecastday[index].day.mintemp_c) +
         "°c";
     });
-
-    predictionDesc.forEach((pred, i) => {
-        pred.innerHTML = data?.forecast?.forecastday[i]?.day?.condition?.text;
+  
+    predictionDesc.forEach((d, index) => {
+      d.innerHTML = data.forecast.forecastday[index].day.condition.text;
     });
-
-    nextDay.forEach((day, i) => {
-        let weekdate = new Date(
-          data?.forecast?.forecastday[i + 1]?.date
-        ).getDate();
-        let weekday =
-          weekDays[
-            new Date(data?.forecast?.forecastday[i + 1]?.date).getDay()
-          ];
-    
-        day.innerHTML = `${weekday} ${weekdate}`;
+  
+    nextDay.forEach((day, index) => {
+      let weekdate = new Date(
+        data.forecast.forecastday[index + 1].date
+      ).getDate();
+      let weekday =
+        weekDays[
+          new Date(data.forecast.forecastday[index + 1].date).getDay()
+        ];
+  
+      day.innerHTML = `${weekday} ${weekdate}`;
     });
-};
+  }
+  
+
+
+// function forecastdayReport(data) {
+//     const dailyData = data?.forecast?.forecastday;
+//     if (dailyData) {
+//         dailyData.forEach((day, i) => {
+//             if (daysIcon[i] && day.day && day.day.condition) {
+//                 daysIcon[i].src = day.day.condition.icon;
+//             }
+
+//             if (daysTemp[i] && day.day) {
+//                 daysTemp[i].innerHTML = `${
+//                     day.day.maxtemp_c !== undefined ? Math.round(day.day.maxtemp_c) + "°c" : ""
+//                 } <span> / </span> ${
+//                     day.day.mintemp_c !== undefined ? Math.round(day.day.mintemp_c) + "°c" : ""
+//                 }`;
+
+//                 if (predictionDesc[i] && day.day.condition) {
+//                     predictionDesc[i].innerHTML = day.day.condition.text;
+//                 }
+//             }
+
+//             // Update the date for the next day
+//             if (i < dailyData.length - 1 && nextDay[i]) {
+//                 const nextDate = new Date(dailyData[i + 1].date);
+//                 nextDay[i].innerHTML = `${weekDays[nextDate.getDay()]} ${nextDate.getDate()}`;
+//             }
+//         });
+//     }
+// }
 
 function time() {
     var timezone = data?.location?.tz_id;
