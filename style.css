@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Nunito:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Poppins&family=Roboto&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
 
+/* || RESET */
 * {
     padding: 0;
     margin: 0;
@@ -7,12 +8,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
+
+body {
     position: relative;
-    background-color:#fff ;
+    background-color: #fff;
 }
 
-/* ---- Container ---- */
+
+/* || STARTING */
 .container {
     position: relative;
     width: 100%;
@@ -21,21 +24,22 @@ body{
     color: #0a2348;
     margin: 0 auto;
 }
-.weather-rep{
+
+.weather-report {
     min-width: 350px;
     flex: 1;
     height: 1000px;
     padding: 30px 40px;
 }
 
-
-/* || NAVIGATION BAR section css STRt */ 
+/* || NAVIGATION BAR */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     color: #0a2348;
 }
+
 .location {
     display: flex;
     flex-direction: column;
@@ -47,19 +51,19 @@ nav {
     align-items: center;
     gap: 10px;
 }
-.location  h2{
+.location h2 {
     font-size: 30px;
+    /* margin-right: 30px; */
 }
-.location  h3 {
+
+.location h3 {
     font-size: 20px;
 }
 
-.location h3  img {
+.location h3 i {
     font-size: 18px;
     padding-right: 10px;
 }
-
-/* search Area section css */
 
 .search-area {
     position: relative;
@@ -84,7 +88,7 @@ nav {
     color: #0a2348;
 }
 
-.search-area img {
+.search-area i {
     position: absolute;
     top: 12px;
     right: 0;
@@ -95,7 +99,8 @@ nav {
     text-align: center;
 }
 
-.hamburger{
+/* Hamburger */
+.hamburger {
     display: none;
     position: absolute;
     right: 30px;
@@ -112,8 +117,9 @@ nav {
     transition: all 0.3s ease-in-out;
     background-color: #0a2348;
 }
-/* Main weather report css start */
-.curr-status{
+
+/* || MAIN WEATHER REPORT BOX */
+.current-status {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -121,7 +127,7 @@ nav {
     padding: 40px 0;
 }
 
-.weather{
+.weather {
     min-width: 200px;
     max-width: 650px;
     min-height: 325px;
@@ -139,64 +145,60 @@ nav {
         -2px -2px 10px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Box-1 */
-
-.weather-1{
+/* || BOX-1 */
+.weather-box1 {
     background: linear-gradient(to right bottom, #b7f1f3, #feddcd);
-    /* background-image: linear-gradient(to right top, #80aced, #32c7f4, #23dddd, #7febb4, #d2f090); */
-   
+
 }
 
-
-.weather-heading{
+.weather-heading {
     display: flex;
     align-items: center;
     gap: 20px;
 }
 
-.weather-img{
-    position: relative;
+.weather-icon {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     background-color: #fff;
     text-align: center;
     padding: 8px;
+    position: relative;
 }
-.weather-img > img{
+
+.weather-icon > img{
     position: absolute;
     left: -7px;
     top: -4px;
 }
-
-.weather-desc > h3{
-    color: #0a2348;
-    font-size: 20px;
-    font-weight: 500;
-}
-.weather-desc h4{
+.weather-description h4 {
     font-size: 14px;
     white-space: nowrap;
     font-weight: 200;
+
 }
-.weather-temp{
+
+.weather-temperature {
     margin-bottom: 10px;
 }
-.weather-temp  .temperature{
+
+.weather-temperature .temperature {
     display: flex;
     align-items: center;
 }
-.temperature h2{
+
+
+.temperature h2 {
     font-size: 50px;
 }
 
-.temperature img{
+.temperature img {
     width: 120px;
     margin-left: 40px;
 }
 
-.temp{
+.temp {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -207,22 +209,25 @@ nav {
     margin: -20px;
 }
 
-.weather-temp p{
+.weather-temperature p {
+    font-weight: 600;
+    letter-spacing: 0.8px;
     margin-top: -25px;
     white-space: wrap;
-    font-weight: 600;
     width: 200px;
-    letter-spacing: 0.8px;
+
 }
+
 .weather .weather-details {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.weather-details .box{
+
+.weather-details .box {
     width: 100px;
     height: 80px;
-    border-radius: 20px;
+    border-radius:20px;
     margin-inline: 4px;
     display: flex;
     flex: 1;
@@ -231,7 +236,7 @@ nav {
     flex-direction: column;
 }
 
-.box p{
+.box p {
     font-size: 14px;
     letter-spacing: 0;
 }
@@ -239,64 +244,61 @@ nav {
 .box h3 {
     font-size: 18px;
 }
-#pressure{
-    color: #fff;
-}
 
-#humidity{
-    color: #0a2348;
-}
-.weather-details div:first-child{
+.weather-details div:first-child {
     background-color: #0a2348;
     color: #fff;
 }
-.weather-details div:nth-child(2){
+
+.weather-details div:nth-child(2) {
     background-color: #CCE16A;
 }
 
-.weather-details div:nth-child(3){
+.weather-details div:nth-child(3) {
     background-color: #fff;
+
 }
 
+/* || BOX-2 */
 
-/* 2- BOx */
-
-.weather-2 {
+.weather-box2 {
     background: #FFD8E7;
-    /* background-image: url("./assets/city.jpg"); */
+    background: #FFD8E7;
+    /* background: linear-gradient(to right bottom, #4EA6E5, #b7f1f3); */
     background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); 
-    /* background-image: linear-gradient(to right, rgb(96, 165, 250), rgb(52, 211, 153)); */
 }
 
+/* || MORE DETAILS BOX */
 .more-detail-box {
     width: 100%;
     height: 110px;
     background-color: rgba(219, 226, 239, 0.5);
-    /* background-color:  #0a2348; */
-    border-radius:20px;
+    /* background-color: #0a2348; */
+    border-radius: 20px;
     margin-block: 20px;
     color: #fff;
-    padding: 14px;
+    padding: 15px;
     font-weight: 100;
 }
 
-.more-detail-box  p, h3, span{
-    font-weight: 500;
+.more-detail-box p {
     font-size: 14px;
-    color:  #0a2348;
 }
-.sunrise-sunset{
+
+.sunrise-sunset {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.sunrise, .sunset {
+
+.sunrise,
+.sunset {
     display: flex;
     justify-content: start;
     align-items: center;
     padding-block: 10px;
     white-space: nowrap;
-    margin-right: -5px;
+    margin-right: -10px;
 }
 
 .sunrise span,
@@ -307,11 +309,11 @@ nav {
 
 .sunrise-status p,
 .sunset-status p {
-    font-size: 15px;
+    font-size: 12px;
     margin: 2px;
 }
 
-/* box of UVI Rays Css Start */
+/* || UVI RAYS BOX */
 
 .more-Dbox{
     background-color:#3f72af;
@@ -324,6 +326,7 @@ nav {
     color: #0a2348;
     padding: 10px;
 }
+
 .uvi-rays-area {
     display: flex;
     align-items: center;
@@ -360,22 +363,21 @@ nav {
     font-weight: 100;
 }
 
-/* box of UVI Rays Css end */
+/* || HOURLY TEMPERATURE */
 
-/* 24-Hourly temperature css strart */
-
-.hourly-weather{
+.hourly-temperature {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    color: #0a2348; 
+    color:#0a2348;
 }
-.hourly-Temp-heading{
+
+.hourly-temperature-heading h2 {
     white-space: nowrap;
     letter-spacing: 0.8px;
 }
 
-.temp-at{
+.today-at {
     display: grid;
     overflow: scroll;
     grid-template-columns: repeat(12, 1fr);
@@ -383,34 +385,38 @@ nav {
     -ms-overflow-style: none;
     scrollbar-width: none;
     border-radius: 20px;
-    background: linear-gradient(to right bottom, #4EA6E5, #b7f1f3);
+    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); 
+    /* background: linear-gradient(to right bottom, #4EA6E5, #b7f1f3); */
     background-position: top;
     background-size: cover;
     padding: 20px 10px;
 }
 
-.temp-at::-webkit-scrollbar {
+/* Hide scrollbar for Chrome, Safari and Opera */
+.today-at::-webkit-scrollbar {
     display: none;
-} 
-.hourly-box{
-    /* background-color:  #f3f7f7; */
+}
+
+.hours-box {
     background-color: rgba(219, 226, 239, 0.7);
     width: 110px;
     padding: 10px;
-    border-radius:20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     flex-wrap: row;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
 }
 
-.hourly-box p{
+.hours-box p {
     font-size: 14px;
     font-weight: 700;
 }
 
-.slider{
+/* || SLIDEBAR */
+
+.slidebar {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -418,8 +424,8 @@ nav {
     width: 320px;
     height: 920px;
     border-radius: 0 0 20px 0;
-    background-color: rgba(237, 242, 250, 0.5);
-    /* background-color: #f3f7f7; */
+    /* background-color:#d4cffa; */
+    background-color:#f5f3e2;
     padding: 20px 15px;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -427,13 +433,12 @@ nav {
     z-index: 3;
 }
 
-.slider::-webkit-scrollbar {
+.slidebar::-webkit-scrollbar {
     display: none;
 }
 
-
-.time-date{
-    font-size: 14px;
+.time-date {
+    margin: 10px 20px;
 }
 
 .time-date h2 {
@@ -444,22 +449,24 @@ nav {
 .time-date p {
     font-size: 14px;
 }
-/* Air quality Prediction section css staert */
-.slider .aqi-predict{
+
+/* Air quality Prediction */
+
+.slidebar .aqi-prediction {
     position: relative;
     width: 100%;
     border-radius: 20px;
     background-image: url("./assets/naturee.jpg");
     background-position: center;
     background-size: cover;
-    margin: 20px 0 20px;
+    margin: 30px 0 20px;
     color: #0a2348;
     padding: 10px;
 }
 
-.aqi-predict .current-aqi {
+.aqi-prediction .current-aqi {
     width: 100%;
-    height: 120px;
+    height: 130px;
     display: flex;
     flex-direction: column;
     font-weight: 700;
@@ -467,29 +474,29 @@ nav {
     padding: 0 20px;
 }
 
-.Aqi-lvl{
+.consern-level {
+    margin-top: -40px;
+}
+
+.aqi-level {
     display: flex;
     gap: 20px;
 }
 
-.Aqi-lvl .Aqi{
+.aqi-level .aqi {
     font-size: 25px;
 }
 
-.Aqi-lvl span{
+.aqi-level span {
     background-color: #f4e10d;
     width: 45px;
     height: 30px;
     text-align: center;
     border-radius: 10px;
+    /* padding: 5px; */
 }
 
-.consern-lvl{
-    margin-top: -40px;
-}
-
-/* || 6 DAYS ForecaST SECTION CS START */
-
+/* || 6 DAYS FORECAST */
 .weather-prediction {
     display: flex;
     justify-content: center;
@@ -507,11 +514,10 @@ nav {
     text-align: center;
     padding-top: 10px;
     width: 100%;
-    color: #0a2348;
 }
 
 .days-box {
-    background-color:  #fff;
+    background-color: #fff;
     display: flex;
     align-items: end;
     justify-content: space-between;
@@ -581,32 +587,17 @@ footer .copyright {
     letter-spacing: 0.5px;
 
 }
-footer .copyright a{
-    color: #ee9157;
-}
-#copyright {
-    color: #fff;
+
+.copyright > a{
+    color: #ea9e24;
 }
 
 
-
-/* FOr  RESPONSIVE CSS start */
+/* || RESPONSIVENESS */
 @media screen and (max-width: 1020px) {
 
-    .weather-rep {
+    .weather-report {
         height: 1320px;
-    }
-
-    .weather {
-        width: 100%;
-    }
-
-    .curr-status {
-        flex-direction: column;
-    }
-
-    .sunrise-sunset {
-        margin-inline: 20px;
     }
 
     .more-detail-box {
@@ -614,11 +605,19 @@ footer .copyright a{
         margin: 20px auto;
     }
 
-    .slider {
+    .slidebar {
         height: 1320px;
     }
 
-    .hourly-weather {
+    .current-status {
+        flex-direction: column;
+    }
+
+    .weather {
+        width: 100%;
+    }
+
+    .hourly-temperature {
         gap: 0;
     }
 
@@ -626,6 +625,9 @@ footer .copyright a{
         height: 100px;
     }
 
+    .sunrise-sunset {
+        margin-inline: 20px;
+    }
 
 }
 
@@ -660,7 +662,7 @@ footer .copyright a{
         margin-left: -20px;
     }
 
-    .slider {
+    .slidebar {
         position: absolute;
         width: 100%;
         top: 0;
@@ -670,7 +672,7 @@ footer .copyright a{
         transition: 0.3s;
     }
 
-    .slider.active {
+    .slidebar.active {
         display: block;
     }
 
@@ -681,7 +683,7 @@ footer .copyright a{
 
 @media screen and (max-width: 570px) {
 
-    .weather-rep {
+    .weather-report {
         height: 1350px;
     }
 
@@ -689,7 +691,7 @@ footer .copyright a{
         margin-inline: 0;
     }
 
-    .slider {
+    .slidebar {
         height: 1300px;
     }
 
@@ -711,10 +713,10 @@ footer .copyright a{
     }
 
     .location h3 {
-        font-size: var(--SMALL-TEXT);
+        font-size: 14px;
     }
 
-    .hourly-Temp-heading h2 {
+    .hourly-temperature-heading h2 {
         font-size: 20px;
     }
 }
@@ -752,7 +754,7 @@ html {
     scroll-behavior: smooth;
   }
   body::-webkit-scrollbar {
-    width: 10px;
+    width: 11px;
   }
   body {
     scrollbar-width: thin;
@@ -764,8 +766,8 @@ html {
   }
   body::-webkit-scrollbar-thumb {
     background-color: var(--thumbBG);
-    border-radius: 10px;
-    border: 2px solid var(--scrollbarBG);
+    border-radius: 6px;
+    border: 3px solid var(--scrollbarBG);
   }
   
   /* scroll design end */
