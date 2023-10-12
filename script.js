@@ -109,7 +109,7 @@ searchCity.addEventListener("keyup", () => {
 
 function todayWeatherReport() {
   city.innerHTML = data?.location?.name;
-  state.innerHTML = '<img src="./assets/location2.gif" height="20" alt="">' + data?.location?.region + ",";
+  state.innerHTML = '<img src="./assets/location5.gif" height="20" style="color: white" alt="">' + data?.location?.region + ",";
   country.innerHTML = data?.location?.country;
 
   cityTemp.innerHTML = data?.current?.temp_c;
@@ -213,6 +213,20 @@ setInterval(() => {
 }, 1000);
 
 
+// For Dark theme
+
+
+
+
+
+
+
+
+
+
+
+
+
 // For find Country Flag
 
 // async function fetchSearchWeatherInfo(){
@@ -229,4 +243,6 @@ setInterval(() => {
 // function renderWeatherInfo(weatherInfo){
 //   countryFlag.innerHTML = `<img src="https://flagcdn.com/144x108/${weatherInfo?.sys?.country.toLowerCase()}.png">`; 
 // };
+
+
 
