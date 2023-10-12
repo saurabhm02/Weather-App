@@ -1,18 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,700&family=Nunito:wght@400;700&family=Open+Sans:ital,wght@1,300&family=Poppins&family=Roboto&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,400&display=swap');
 
-/* || RESET */
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+:root {
+
+    --primary-Tcolor: #0a2348;
+    --primary2-Tcolor: #0a2348;
+    --primary3-Tcolor: #0a2348;
+    --secondary-Tcolor: #fff;
+    --primary-Bcolor: #0a2348;
+    --secondary-Bcolor: #f3f7f7;
+    --Light-Bcolor: #fff;
+    --Light-Tcolor: #f4f4f4;
+    --Slidebar-Bcolor : #f5f3e2;
+    --background : #fff; 
+    --weather-box2 : linear-gradient(to right bottom, #b7f1f3, #feddcd);
+    --weather-box3 : linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
+    --box-shaddow : box-shadow: 5px 5px 10px #cccccc,
+    -5px -5px 10px #f4f4f4;
+    --airQuality-box : url("./assets/naturee.jpg");
+    --uvi-box : url("./assets/uvi.jpg");
+    
+}
+
+.dark-theme{
+ 
+    --primary-Tcolor: #f4f4f4;
+    --primary2-Tcolor: #0e0d0d;
+    --primary3-Tcolor: #f4f4f4;
+    --secondary-Tcolor: #fff;
+    --primary-Bcolor: #010208;
+    --secondary-Bcolor: #f3f7f7;
+    --background : #1d1d1d;
+    --Light-Bcolor: #fff;
+    --Light-Tcolor: #f4f4f4; 
+    --Slidebar-Bcolor : #171717;
+    --weather-box2 : linear-gradient(to right bottom, #707272, #3d3224);
+    --weather-box3 : linear-gradient(to right bottom, #345770, #456d6f);
+    --box-shaddow : box-shadow: 5px 5px 10px #3d3d3d,
+    -5px -5px 10px #424242;
+    --airQuality-box : url("./assets/nature.jpg");
+    --uvi-box : url("./assets/uviSet.jpg");
+}
 
 
 body {
     position: relative;
-    background-color: #fff;
+    background-color: var(--background);
 }
+
+#moon-sun{
+    width: 30px;
+    cursor: pointer;
+}
+.dl-time{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 
 
 /* || STARTING */
@@ -21,11 +72,12 @@ body {
     width: 100%;
     min-height: 100vh;
     display: flex;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     margin: 0 auto;
 }
 
 .weather-report {
+    background-color: var(--background);
     min-width: 350px;
     flex: 1;
     height: 1000px;
@@ -37,7 +89,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
 }
 
 .location {
@@ -77,7 +129,7 @@ nav {
     background-color: #f4f4f4;
     border: none;
     outline: none;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     padding-left: 20px;
     font-weight: 500;
     font-size: 16px;
@@ -119,7 +171,7 @@ nav {
     height: 3px;
     margin: 5px auto;
     transition: all 0.3s ease-in-out;
-    background-color: #0a2348;
+    background-color: var(--primary-Tcolor);
 }
 
 /* || MAIN WEATHER REPORT BOX */
@@ -144,7 +196,7 @@ nav {
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.2),
         -2px -2px 10px rgba(0, 0, 0, 0.2);
 
@@ -153,7 +205,8 @@ nav {
 
 /* || BOX-1 */
 .weather-box1 {
-    background: linear-gradient(to right bottom, #b7f1f3, #feddcd);
+    background: var(--weather-box2);
+    
 
 }
 
@@ -167,7 +220,7 @@ nav {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #fff;
+    background-color: var(--secondary-Tcolor);
     text-align: center;
     padding: 8px;
     position: relative;
@@ -250,14 +303,17 @@ nav {
     font-size: 14px;
     letter-spacing: 0;
 }
+.box3{
+    color: var(--primary2-Tcolor);
+}
 
 .box h3 {
     font-size: 18px;
 }
 
 .weather-details div:first-child {
-    background-color: #0a2348;
-    color: #fff;
+    background-color: var(--primary-Bcolor);
+    color: var(--secondary-Tcolor);
 }
 
 .weather-details div:nth-child(2) {
@@ -265,7 +321,7 @@ nav {
 }
 
 .weather-details div:nth-child(3) {
-    background-color: #fff;
+    background-color: var(--secondary-Tcolor);
 
 }
 
@@ -273,9 +329,7 @@ nav {
 
 .weather-box2 {
     background: #FFD8E7;
-    background: #FFD8E7;
-    /* background: linear-gradient(to right bottom, #4EA6E5, #b7f1f3); */
-    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); 
+    background: var(--weather-box3);
 }
 
 /* || MORE DETAILS BOX */
@@ -286,7 +340,7 @@ nav {
     /* background-color: #0a2348; */
     border-radius: 20px;
     margin-block: 20px;
-    color: #fff;
+    color: var(--secondary-Tcolor);
     padding: 15px;
     font-weight: 100;
     /* transition: transform 0.3s ease;
@@ -330,14 +384,13 @@ nav {
 /* || UVI RAYS BOX */
 
 .more-Dbox{
-    background-color:#3f72af;
     width: 100%;
     border-radius: 20px;
-    background-image: url("./assets/uvi.jpg");
+    background-image: var(--uvi-box) ;
     background-position: center;
     background-size: cover;
     margin: 5px 0 5px;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     padding: 10px;
 }
 
@@ -365,7 +418,7 @@ nav {
 
 .uvi-rays-status .uvi-level {
     background-color: #CCE16A;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     padding: 3px 8px;
     border-radius: 20px;
     font-weight: 600;
@@ -387,6 +440,7 @@ nav {
 }
 
 .hourly-temperature-heading h2 {
+    color: var(--primary3-Tcolor);
     white-space: nowrap;
     letter-spacing: 0.8px;
 }
@@ -399,7 +453,7 @@ nav {
     -ms-overflow-style: none;
     scrollbar-width: none;
     border-radius: 20px;
-    background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%); 
+    background-image: var(--weather-box3); 
     /* background: linear-gradient(to right bottom, #4EA6E5, #b7f1f3); */
     background-position: top;
     background-size: cover;
@@ -440,7 +494,7 @@ nav {
     height: 920px;
     border-radius: 0 0 20px 0;
     /* background-color:#d4cffa; */
-    background-color:#f5f3e2;
+    background-color:var(--Slidebar-Bcolor);
     padding: 20px 15px;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -453,7 +507,7 @@ nav {
 }
 
 .time-date {
-    margin: 10px 20px;
+    margin: 10px 10px 10px 5px;
 }
 
 .time-date h2 {
@@ -471,11 +525,11 @@ nav {
     position: relative;
     width: 100%;
     border-radius: 20px;
-    background-image: url("./assets/naturee.jpg");
+    background-image: var(--airQuality-box);
     background-position: center;
     background-size: cover;
     margin: 30px 0 20px;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     padding: 10px;
 }
 
@@ -517,7 +571,7 @@ nav {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    color: #0a2348;
+    color: var(--primary-Tcolor);
     gap: 20px;
     margin-block: 10px;
 
@@ -532,15 +586,14 @@ nav {
 }
 
 .days-box {
-    background-color: #fff;
+    background-color: var(--Light-Bcolor);
     display: flex;
     align-items: end;
     justify-content: space-between;
     width: 100%;
     border-radius: 20px;
     padding: 14px 15px;
-    box-shadow: 5px 5px 10px #cccccc,
-        -5px -5px 10px #f4f4f4;
+    box-shadow: var(--box-shaddow);
 }
 
 .days-box img {
@@ -563,7 +616,7 @@ nav {
 }
 
 .days .prediction-desc {
-    color: #0a2348;
+    color: var(--primary2-Tcolor);
     font-weight: 700;
 }
 
@@ -584,7 +637,7 @@ nav {
 footer {
     height: 60px;
     width: 100%;
-    background-color: #0a2348;
+    background-color: var(--primary-Bcolor);
     position: absolute;
     bottom: 0;
     left: 0;
