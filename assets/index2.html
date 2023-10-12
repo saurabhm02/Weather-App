@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>Weather App</title>
+ <meta charset="utf-8">
+ <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places"></script>
+ <script>
+   function getLocation() {
+     if (navigator.geolocation) {
+       navigator.geolocation.getCurrentPosition(showWeather);
+     } else {
+       alert("Geolocation is not supported by this browser.");
+     }
+   }
+
+   function showWeather(position) {
+     var latitude = position.coords.latitude;
+     var longitude = position.coords.longitude;
+     var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&appid=YOUR_API_KEY&units=metric";
+     fetch(apiUrl)
+       .then(response => response.json())
+       .then(data => {
+         var temperature = data.main.temp;
+         var description = data.weather[0].description;
+         var iconUrl = data.weather[0].icon;
+         document.getElementById("temperature").innerHTML = "Temperature: " + temperature + " &#8457;";
+         document.getElementById("description").innerHTML = "Description: " + description;
+         document.getElementById("icon").src = iconUrl;
+       })
+       .catch(error => console.log(error));
+   }
+
+   getLocation();
+ </script>
+</head>
+<body>
+ <h1>Weather App</h1>
+ <p id="temperature"></p>
+ <p id="description"></p>
+ <img id="icon">
+</body>
+</html>
