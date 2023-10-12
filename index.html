@@ -17,9 +17,12 @@
         <div class="slidebar">
 
             <!-- Time and Date -->
-            <div class="time-date">
-                <h2 class="time">12:03:40 AM</h2>
-                <p class="date">7 March 2023, Monday</p>
+            <div class="dl-time">
+                <img src="./assets/moon.png" id="moon-sun" height="35" width="30"  alt="">
+                <div class="time-date">
+                    <h2 class="time">12:03:40 AM</h2>
+                    <p class="date">7 March 2023, Monday</p>
+                </div>
             </div>
 
             <div class="aqi-prediction">
@@ -191,7 +194,7 @@
                             <p>Visibility</p>
                             <h3 id="visibility">4.3 km</h3>
                         </div>
-                        <div class="box">
+                        <div class="box box3">
                             <p>Humidity</p>
                             <h3 id="humidity">87%</h3>
                         </div>
@@ -414,6 +417,18 @@
         </div>
     </footer>
 
+    <script>
+        var moonSun = document.getElementById("moon-sun");
+        moonSun.onclick  = function(){
+             document.body.classList.toggle("dark-theme");
+             if(document.body.classList.contains("dark-theme")){
+                moonSun.src = "./assets/sun.png";
+             }
+             else{
+                moonSun.src = "./assets/moon.png";
+             }
+        }
+    </script>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/f5c8e13b2d.js" crossorigin="anonymous"></script>
 
